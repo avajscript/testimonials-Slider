@@ -27,6 +27,7 @@ body {
   margin-left: 15%;
   top: 10%;
   border-radius: 0.5rem;
+
   img {
     border-radius: 0.5rem;
     width: 100%;
@@ -34,10 +35,13 @@ body {
 }
 
 .slider-icon {
+  position: relative;
   border-radius: 4rem;
-  background-color: black;
-  width: 15%;
-  height: 40px;
+  background-color: white;
+  width: 25%;
+  height: 50px;
+  margin: 0 auto;
+  top: -25px;
 
   img {
     width: 15px;
@@ -82,9 +86,29 @@ body {
 .flex-container {
   display: flex;
 }
+
+.flex {
+  flex: 1;
+}
 .flex-center {
   flex: 1;
   flex-basis: 50%;
   justify-content: center;
   align-self: center;
+}
+
+.block {
+  display: block;
+}
+
+.box-shadow {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+// End of reusable
+
+@media screen and (min-width: 1052px) {
+  .flex-container-dynamic {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
