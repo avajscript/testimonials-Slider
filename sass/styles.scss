@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+}
+body {
+  font-size: 22px;
+  text-align: center;
+  color: hsl(240, 38%, 20%);
+}
+
+.main {
+  width: 100%;
+}
+
+.first-slide {
+  .top-section {
+    position: relative;
+    background: url("../images/pattern-bg.svg") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.image-slider {
+  position: absolute;
+  width: 70%;
+  margin-left: 15%;
+  top: 10%;
+  border-radius: 0.5rem;
+  img {
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+}
+
+.slider-icon {
+  border-radius: 4rem;
+  background-color: black;
+  width: 15%;
+  height: 40px;
+
+  img {
+    width: 15px;
+  }
+
+  .flex-container {
+    height: 100%;
+  }
+}
+
+.bottom-section {
+  padding: 2rem;
+  background-image: url("../images/pattern-quotes.svg"),
+    url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position: center top, left bottom;
+}
+
+.text-content {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.name-text {
+  margin-top: 1.5rem;
+  font-size: 18px;
+  p:nth-of-type(1) {
+    font-weight: 700;
+  }
+  p:nth-of-type(2) {
+    font-weight: 500;
+    color: hsl(240, 18%, 77%);
+  }
+}
+// Reusable
+
+.background-image {
+  width: 100%;
+  visibility: hidden;
+}
+
+.flex-container {
+  display: flex;
+}
+.flex-center {
+  flex: 1;
+  flex-basis: 50%;
+  justify-content: center;
+  align-self: center;
+}
