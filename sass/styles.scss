@@ -50,6 +50,22 @@ body {
   .flex-container {
     height: 100%;
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.icon-previous,
+.icon-next {
+  &:hover img {
+    width: 17px;
+  }
+  &:active img {
+    width: 10px;
+  }
+}
+
+@keyframes hover-icon {
 }
 
 .bottom-section {

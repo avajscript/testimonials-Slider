@@ -51,7 +51,21 @@ body {
   height: 100%;
 }
 
-.bottom-section {
+.slider-icon:hover {
+  cursor: pointer;
+}
+
+.icon-previous:hover img,
+.icon-next:hover img {
+  width: 17px;
+}
+
+.icon-previous:active img,
+.icon-next:active img {
+  width: 10px;
+}
+
+@keyframes hover-icon {}.bottom-section {
   padding: 2rem;
   background-image: url("../images/pattern-quotes.svg"), url("../images/pattern-curve.svg");
   background-repeat: no-repeat;
