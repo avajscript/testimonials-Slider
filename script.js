@@ -4,30 +4,20 @@ window.onload = () => {
   const nextButton = document.querySelector(".icon-next");
   const slideOne = document.querySelector(".first-slide");
   const slideTwo = document.querySelector(".second-slide");
+
   var curSlide = 1;
-  var elem = slideOne;
+
   // Functions
   function changeSlide() {
     if (curSlide == 1) {
       curSlide = 2;
-      elem = slideOne;
-    } else {
-      curSlide = 1;
-      elem = slideTwo;
+      slideOne.style.display = "none";
+      slideTwo.style.display = "block";
     }
-    let id = null;
-    let left = 0;
-    clearInterval(id);
-    id = setInterval(slideLeft, 5);
-    function slideLeft() {
-      if (left == 100) {
-        clearInterval(id);
-        elem.style.left = -100 + "%";
-        elem.style.right = 100 + "%";
-      } else {
-        left++;
-        elem.style.left = left + "%";
-      }
+    if (curSlide == 2) {
+      curSlide = 1;
+      slideTwo.style.display = "none";
+      slideOne.style.display = "block";
     }
   }
   // Event Listeners

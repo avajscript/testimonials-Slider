@@ -13,7 +13,10 @@ body {
   width: 100%;
 }
 
-.first-slide {
+.first-slide,
+.second-slide {
+  position: absolute;
+
   .top-section {
     position: relative;
     background: url("../images/pattern-bg.svg") no-repeat;
@@ -63,9 +66,6 @@ body {
   &:active img {
     width: 10px;
   }
-}
-
-@keyframes hover-icon {
 }
 
 .bottom-section {
@@ -121,6 +121,10 @@ body {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
 }
 // End of reusable
+
+// Animations
+
+// End of animations
 
 @media screen and (min-width: 1052px) {
   .flex-container-dynamic {
