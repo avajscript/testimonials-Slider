@@ -1,7 +1,7 @@
 window.onload = () => {
   // Variables
-  const previousButton = document.querySelector(".icon-previous");
-  const nextButton = document.querySelector(".icon-next");
+  const previousButton = document.querySelectorAll(".icon-previous");
+  const nextButton = document.querySelectorAll(".icon-next");
   const slideOne = document.querySelector(".first-slide");
   const slideTwo = document.querySelector(".second-slide");
 
@@ -13,16 +13,19 @@ window.onload = () => {
       curSlide = 2;
       slideOne.style.display = "none";
       slideTwo.style.display = "block";
-    }
-    if (curSlide == 2) {
+    } else if (curSlide == 2) {
       curSlide = 1;
       slideTwo.style.display = "none";
       slideOne.style.display = "block";
     }
   }
+
   // Event Listeners
 
-  [previousButton, nextButton].forEach((button) => {
+  nextButton.forEach((button) => {
+    button.addEventListener("click", changeSlide);
+  });
+  previousButton.forEach((button) => {
     button.addEventListener("click", changeSlide);
   });
 };
